@@ -109,12 +109,26 @@ body.white{
     background-size: cover;
     width: 630px;
     height: 200px;
-
+ 
     padding: 20px;
     margin-top: 20px;
   }
   .card:hover{
     opacity: 0.5;
+  }
+
+  .test {
+    background-color: rgba(176,172,186, 0.2);
+    color: #e2dddf;
+    border-radius: 25px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    width: 105%;
+    height: 250px;
+ 
+    padding: 20px;
+    margin-top: 20px;
   }
   
   
@@ -134,7 +148,7 @@ body.white{
   }
   
   /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1550px) {
     .leftcolumn, .rightcolumn {   
       width: 100%;
       padding: 0;
