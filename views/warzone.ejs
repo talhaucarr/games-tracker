@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    body {
+      background: linear-gradient(-45deg, #c7c8cb, #3d4044, #282b30, #1e2124);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+    }
+
+    body.white {
+      background: linear-gradient(-45deg, #282b30, #3d4044, #b3b4b6, #c7c8cb);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial;
+      padding: 10px;
+
+    }
+
+    /* Header/Blog Title */
+    .header {
+      padding: 30px;
+      text-align: center;
+      color: #e2dddf;
+    }
+
+    .header h1 {
+      font-size: 50px;
+    }
+
+    /* Style the top navigation bar */
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    /* Style the topnav links */
+    .topnav a {
+      float: left;
+      display: block;
+      color: #3d898d;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    /* Change color on hover */
+    .topnav a:hover {
+      background-color: #3d898d;
+      color: white;
+    }
+
+    /* Create two unequal columns that floats next to each other */
+    /* Left column */
+    .leftcolumn {
+      float: left;
+      width: 75%;
+      padding-right: 20%;
+      padding-left: 20px;
+    }
+
+    /* Right column */
+    .rightcolumn {
+      float: left;
+      width: 25%;
+      /*background-color: #f1f1f1;*/
+      padding-left: 20px;
+      padding-right: 30px;
+    }
+
+    /* Right column */
+    .midcolumn {
+      float: left;
+      width: 75%;
+      /*background-color: #f1f1f1;*/
+      padding-left: 475px;
+    }
+
+    /* Fake image */
+    .fakeimg {
+
+      width: 100%;
+      padding: 20px;
+    }
+
+    /* Add a card effect for articles */
+    .card {
+      background-color: rgba(176, 172, 186, 0.2);
+      color: #e2dddf;
+
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    .card:hover {
+      opacity: 0.5;
+    }
+
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 20px;
+      text-align: center;
+
+      margin-top: 20px;
+    }
+
+    /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 800px) {
+
+      .leftcolumn,
+      .rightcolumn {
+        width: 100%;
+        padding: 0;
+      }
+    }
+
+    /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+    @media screen and (max-width: 400px) {
+      .topnav a {
+        float: none;
+        width: 100%;
+      }
+    }
+
+    input[type=text] {
+      width: 15%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: none;
+      color: white;
+      background-color: rgba(226, 221, 223, 0.2);
+      border-bottom: 2px solid #3d898d;
+    }
+
+    input[type=submit] {
+      width: 5%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: none;
+      color: white;
+      background-color: rgba(226, 221, 223, 0.2);
+      border-bottom: 2px solid #3d898d;
+    }
+
+    input[type=submit]:hover {
+      background-color: #3d898d;
+      color: white;
+      border-bottom: 2px solid white;
+    }
+
+    select {
+      width: 6%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: none;
+      color: white;
+      background-color: rgba(226, 221, 223, 0.2);
+      border-bottom: 2px solid #3d898d;
+    }
+
+    select select {
+      color: white;
+      background-color: rgba(226, 221, 223, 0.2);
+    }
+
+
+
+    a {
+      color: transparent;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      grid-gap: 10px;
+      background-color: #333;
+      
+      padding: 10px;
+    }
+    
+    .grid-container > div {
+      background-color: rgba(176,172,186, 0.2);
+      text-align: center;
+      padding: 20px 0;
+      font-size: 30px;
+      color: white;
+      border-bottom: 2px solid #3d898d;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="header">
+    <a href="/">
+      <h1 style="color: #e2dddf;">BUGS</h1>
+    </a>
+    <p>Best Gamers Use Saggio</p>
+
+    <form action="/" method="post">
+      <!--
+        <select id="cars" name="cars" form="carform">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="opel">Opel</option>
+        <option value="audi">Audi</option>
+      </select>
+      -->
+      
+      <input type="text" id="fname" name="fname" placeholder="..." required>
+      <input type="submit" value="Ara">
+
+    </form>
+
+  </div>
+
+  <div class="topnav">
+    <a href="/about">About Us</a>
+
+    <a href="#" style="float:right">Giriş</a>
+  </div>
+  <br><br><br>
+
+  <div class="grid-container">
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>  
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+    <div class="item6">6</div>
+    <div class="item7">7</div>
+    <div class="item8">8</div>
+  </div>
+
+
+  <br>
+  <%=games_played%>
+    <br>
+
+    <%=wins%>
+      <br>
+      <%=kills%>
+        <br>
+        <%=downs%>
+          <br>
+          <%=kdRatio%>
+</body>
+
+</html>
