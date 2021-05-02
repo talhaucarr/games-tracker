@@ -108,14 +108,17 @@
 
     /* Add a card effect for articles */
     .card {
+
       background-color: rgba(176, 172, 186, 0.2);
       color: #e2dddf;
-
       padding: 20px;
       margin-top: 20px;
+
     }
 
     .card:hover {
+      background-color: #3d898d;
+      color: white;
       opacity: 0.5;
     }
 
@@ -204,21 +207,33 @@
     }
 
     .grid-container {
+      margin-left: 25px;
+      margin-right: 25px;
       display: grid;
       grid-template-columns: auto auto auto auto;
-      grid-gap: 10px;
+      grid-gap: 60px;
       background-color: #333;
-      
-      padding: 10px;
+
+      padding: 5px;
     }
-    
-    .grid-container > div {
-      background-color: rgba(176,172,186, 0.2);
+
+    .grid-container>div {
+      margin-left: 25px;
+      margin-right: 25px;
+      background-color: rgba(176, 172, 186, 0.2);
       text-align: center;
-      padding: 20px 0;
-      font-size: 30px;
+      padding: 10px 0;
+      font-size: 15px;
       color: white;
       border-bottom: 2px solid #3d898d;
+    }
+
+    span {
+      font-size: 35px;
+    }
+
+    p {
+      font-size: 26px;
     }
   </style>
 
@@ -229,6 +244,7 @@
     <a href="/">
       <h1 style="color: #e2dddf;">BUGS</h1>
     </a>
+
     <p>Best Gamers Use Saggio</p>
 
     <form action="/" method="post">
@@ -240,7 +256,7 @@
         <option value="audi">Audi</option>
       </select>
       -->
-      
+
       <input type="text" id="fname" name="fname" placeholder="..." required>
       <input type="submit" value="Ara">
 
@@ -254,30 +270,127 @@
     <a href="#" style="float:right">Giriş</a>
   </div>
   <br><br><br>
+  <h1 style="color: #e2dddf; text-align:center; border-bottom: 2px solid #3d898d;">
+    <%=name%>
+  </h1>
 
+  <h1 style="color: #e2dddf;">
+    Total Game Statistics
+  </h1>
   <div class="grid-container">
-    <div class="item1">1</div>
-    <div class="item2">2</div>
-    <div class="item3">3</div>  
-    <div class="item4">4</div>
-    <div class="item5">5</div>
-    <div class="item6">6</div>
-    <div class="item7">7</div>
-    <div class="item8">8</div>
+    <div class="card"><span style="border-bottom: 4px solid #3d898d;"> Games Played</span><br> <br>
+      <p>
+        <%=games_played%>
+      </p>
+
+    </div>
+
+    <div class="card"><span style="border-bottom: 4px solid #3d898d;"> Kills</span><br> <br>
+      <p>
+        <%=kills%>
+      </p>
+
+    </div>
+    <div class="card"><span style="border-bottom: 4px solid #3d898d;"> Downs</span><br> <br>
+      <p>
+        <%=downs%>
+      </p>
+
+    </div>
+    <div class="card"><span style="border-bottom: 4px solid #3d898d;"> Deaths</span><br> <br>
+      <p>
+        <%=deaths%>
+      </p>
+
+    </div>
+    <div class="card"><span style="border-bottom: 4px solid #3d898d;"> KDA</span><br> <br>
+      <p>
+        <%=kdRatio%>
+      </p>
+
+
+    </div>
+
+    <div class="card"><span style="border-bottom: 4px solid #3d898d;"> Wins</span><br> <br>
+      <p>
+        <%=wins%>
+      </p>
+
+    </div>
+    <div class="card"><span style="border-bottom: 4px solid #3d898d;"> Top Five</span><br> <br>
+      <p>
+        <%=top_five%>
+      </p>
+
+    </div>
+    <div class="card"><span style="border-bottom: 4px solid #3d898d;"> Top Ten</span><br> <br>
+      <p>
+        <%=top_ten%>
+      </p>
+    </div>
   </div>
 
 
-  <br>
-  <%=games_played%>
-    <br>
+  <h1 style="color: #e2dddf;">
+    Weekly Statistics
+  </h1>
+  <div class="grid-container">
+    <div class="card"><span style="border-bottom: 4px solid #3d898d;"> Games Played</span><br> <br>
+      <p>
+        <%=weekly_data.wz.all.properties.matchesPlayed%>
+      </p>
+    </div>
+    <div class="card"><span style="border-bottom: 4px solid #3d898d;"> KDA</span><br> <br>
+      <p>
+        <%=weekly_data.wz.all.properties.kdRatio%>
+      </p>
+    </div>
+    <div class="card"><span style="border-bottom: 4px solid #3d898d;"> Kills</span><br> <br>
+      <p>
+        <%=weekly_data.wz.all.properties.kills%>
+      </p>
+    </div>
+    <div class="card"><span style="border-bottom: 4px solid #3d898d;"> Headshots</span><br> <br>
+      <p>
+        <%=weekly_data.wz.all.properties.headshots%>
+      </p>
+    </div>
+    <div class="card"><span style="border-bottom: 4px solid #3d898d;"> Damage Done</span><br> <br>
+      <p>
+        <%=weekly_data.wz.all.properties.damageDone%>
+      </p>
+    </div>
+    <div class="card"><span style="border-bottom: 4px solid #3d898d;"> Damage Done</span><br> <br>
+      <p>
+        <%=weekly_data.wz.all.properties.damageDone%>
+      </p>
+    </div>
+    <div class="card"><span style="border-bottom: 4px solid #3d898d;"> Gulag Kills</span><br> <br>
+      <p>
+        <%=weekly_data.wz.all.properties.gulagKills%>
+      </p>
+    </div>
+    <div class="card"><span style="border-bottom: 4px solid #3d898d;"> Deaths</span><br> <br>
+      <p>
+        <%=weekly_data.wz.all.properties.deaths%>
+      </p>
+    </div>
+    <div class="card"><span style="border-bottom: 4px solid #3d898d;"> Damage Taken</span><br> <br>
+      <p>
+        <%=weekly_data.wz.all.properties.damageTaken%>
+      </p>
+    </div>
 
-    <%=wins%>
-      <br>
-      <%=kills%>
-        <br>
-        <%=downs%>
-          <br>
-          <%=kdRatio%>
+
+    <br>
+  </div>
+
+
+  <div class="footer">
+    <h2 style="color: white;">BUGS</h2>
+  </div>
+
+
 </body>
 
 </html>
