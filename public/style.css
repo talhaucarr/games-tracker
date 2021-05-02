@@ -45,6 +45,7 @@ body.white{
   
   /* Style the top navigation bar */
   .topnav {
+    border-radius: 8px;
     overflow: hidden;
     background-color: #333;
   }
