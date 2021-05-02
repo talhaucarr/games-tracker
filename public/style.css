@@ -100,9 +100,15 @@ body.white{
   
   /* Add a card effect for articles */
   .card {
-      background-color: rgba(176,172,186, 0.2);
-      color: #e2dddf;
-    
+    background-color: rgba(176,172,186, 0.2);
+    color: #e2dddf;
+    border-radius: 25px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    width: 630px;
+    height: 200px;
+
     padding: 20px;
     margin-top: 20px;
   }
