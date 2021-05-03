@@ -117,6 +117,18 @@ body.white{
     opacity: 0.5;
   }
 
+  .card2{
+
+    background-color: rgba(176,172,186, 0.2);
+      color: #e2dddf;
+    
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 25px;
+  }
+  .card2:hover{
+    opacity: 0.5;
+  }
   .test {
     background-color: rgba(176,172,186, 0.2);
     color: #e2dddf;
