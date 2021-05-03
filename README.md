@@ -29,7 +29,7 @@ command to run if program contains helper info
 
 Contributors names and contact info
 
-#Talha Uçar 
-#Gökay Özdeğer
-#Sühenda Hilal Eto
-#Süha Küçükali
+# Talha Uçar 
+# Gökay Özdeğer
+# Sühenda Hilal Eto
+# Süha Küçükali
