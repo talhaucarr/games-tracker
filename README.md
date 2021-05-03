@@ -34,4 +34,3 @@ Contributors names and contact info
 * Gökay Özdeğer
 * Sühenda Hilal Eto
 * Süha Küçükali
-
